@@ -12,7 +12,7 @@
 * Gail >= 3.0
 * LibDBus-GLib
 * GConf 2
-* PCMan's [Gtk3Nocsd](https://github.com/PCMan/gtk3-nocsd "PCMan/gtk3-nocsd"), if you want window manager decorations
+* PCMan's [gtk3-nocsd](https://github.com/PCMan/gtk3-nocsd "PCMan/gtk3-nocsd"), if you want window manager decorations
 
 
 To get all of the dependencies under a Debian-based distribution, run:
@@ -51,4 +51,19 @@ To install only libcore and libwidgets use the following command:
 
 ```
 cmake .. -DLIB_ONLY=true
+```
+
+
+**To activate window decorations via the window manager, using gtk3-nocsd**
+
+To execute from a command:
+
+```
+env LD_PRELOAD="/<PATH TO>/gtk3-nocsd.so" pantheon-files
+```
+
+In pantheon-files.desktop, replace the Exec= line with:
+
+```
+Exec=env LD_PRELOAD="/<PATH TO>/gtk3-nocsd.so" pantheon-files %U
 ```

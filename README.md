@@ -14,7 +14,7 @@ If you want to contribute, contribute!
 * All references to, and dependencies upon, Zeitgeist are removed.
 
 * Window decorations are left entirely to the window manager. 
- * This requires use of PCMan's [Gtk3Nocsd](https://github.com/PCMan/gtk3-nocsd "PCMan/gtk3-nocsd")
+ * This requires use of PCMan's [gtk3-nocsd](https://github.com/PCMan/gtk3-nocsd "PCMan/gtk3-nocsd")
   * (First order of TODO business is to remove this dependency, as Files should do that all on its own.)
  * Means Files now looks (semi) normal in Openbox - YAY.
 
