@@ -1,0 +1,12 @@
+include(Translations)
+add_translations_directory(${GETTEXT_PACKAGE})
+add_translations_catalog(${GETTEXT_PACKAGE}
+    ../src/View
+    ../src
+    ../libcore
+    ../libwidgets
+    ../src/View/Chrome
+    ../plugins/marlin-trash
+    ../plugins/network-places
+    ../plugins/pantheon-files-trash
+)

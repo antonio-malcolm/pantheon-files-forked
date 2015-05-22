@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <enum id="viewmode">
+    <value value="0" nick="icon"/>
+    <value value="1" nick="list"/>
+    <value value="2" nick="miller_columns"/>
+  </enum>
+  <enum id="org.pantheon.files.ZoomLevel">
+    <value value="0" nick="smallest"/>
+    <value value="1" nick="smaller"/>
+    <value value="2" nick="small"/>
+    <value value="3" nick="normal"/>
+    <value value="4" nick="large"/>
+    <value value="5" nick="larger"/>
+    <value value="6" nick="largest"/>
+  </enum>
+  <enum id="dateformatmode">
+    <value value="0" nick="iso"/>
+    <value value="1" nick="locale"/>
+    <value value="2" nick="informal"/>
+  </enum>
+
+  <schema path="/org/pantheon/files/preferences/" id="org.pantheon.files.preferences">
+    <key type="b" name="show-sidebar">
+      <default>true</default>
+      <summary>Show the sidebar</summary>
+      <description>Show the sidebar</description>
+    </key>
+    <key type="b" name="show-hiddenfiles">
+      <default>false</default>
+      <summary>Show hidden files</summary>
+      <description>If set to true, hidden files will also be shown (files starting with a "." for example)</description>
+    </key>
+    <key name="date-format" enum="dateformatmode">
+      <default>'informal'</default>
+      <summary>Date Format</summary>
+      <description>The format of file dates. Possible values are "locale", "iso", and "informal".</description>
+    </key>
+    <key type="b" name="single-click">
+      <default>true</default>
+      <summary>single click</summary>
+      <description>Whether items are activated by single clicks instead of dubble clicks</description>
+    </key>
+    <key type="b" name="interpret-desktop-files">
+      <default>true</default>
+      <summary>interpret desktop files</summary>
+      <description>If true the desktop files would be interpreted, a desktop file can represent an executable, a directory etc. (their filename, type and some other properties would be the target ones)</description>
+    </key>
+    <key name="default-viewmode" enum="viewmode">
+      <default>'icon'</default>
+      <summary>Default viewmode when browsing</summary>
+      <description>
+        The default viewmode to be used when opening a new tab or window
+      </description>
+    </key>
+    <key type="as" name="toolbar-items">
+      <default>[ 'Back', 'Forward', 'ViewSwitcher', 'LocationEntry']</default>
+      <summary>List of actions present in the toolbar</summary>
+      <description>
+        List of actions present in the toolbar
+      </description>
+    </key>
+    <key name="sidebar-zoom-level" enum="org.pantheon.files.ZoomLevel">
+      <default>'smallest'</default>
+      <summary>Size of the icons in the Places sidebar</summary>
+      <description>Zoom level used by the places sidebar.</description>
+    </key>
+    <key type="b" name="sidebar-cat-personal-expander">
+      <default>true</default>
+      <summary>Categorie personal expander</summary>
+      <description>Expand/Collapse categorie Personal</description>
+    </key>
+    <key type="b" name="sidebar-cat-devices-expander">
+      <default>true</default>
+      <summary>Categorie Devices expander</summary>
+      <description>Expand/Collapse categorie Devices</description>
+    </key>
+    <key type="b" name="sidebar-cat-network-expander">
+      <default>true</default>
+      <summary>Categorie Network expander</summary>
+      <description>Expand/Collapse categorie Network</description>
+    </key>
+    <key type="i" name="window-width">
+      <default>1000</default>
+      <summary>Window width.</summary>
+      <description>Default window width.</description>
+    </key>
+    <key type="i" name="window-height">
+      <default>680</default>
+      <summary>Window height.</summary>
+      <description>Default window height.</description>
+    </key>
+    <key type="b" name="maximized">
+      <default>false</default>
+      <summary>Whether the navigation window should be maximized.</summary>
+      <description>Whether the navigation window should be maximized by default.</description>
+    </key>
+    <key type="i" name="sidebar-width">
+      <default>191</default>
+      <summary>Width of the side pane</summary>
+      <description>The default width of the side pane in new windows.</description>
+    </key>
+    <key type="i" name="minimum-sidebar-width">
+      <default>96</default>
+      <summary>Minimum width of the side pane</summary>
+      <description>The minimum width of the side pane.</description>
+    </key>
+    <key type="b" name="confirm-trash">
+      <default>true</default>
+      <summary>Confirm trash</summary>
+      <description>Confirm trash</description>
+    </key>
+    <key type="s" name="previewer-path">
+      <default>''</default>
+      <summary>Path of the previewer.</summary>
+      <description>Path of the previewer or executable name (if path already definied in PATH environnment variable). If no path is set, then the space bindkey would just activate the selected items instead of previewing them</description>
+    </key>
+    <key type="b" name="restore-tabs">
+      <default>true</default>
+      <summary>Whether to restore tabs on start up</summary>
+      <description>Whether to restore tabs on start up</description>
+    </key>
+    <key type="i" name="active-tab-position">
+      <default>0</default>
+      <summary>Which tab to make active on start up</summary>
+      <description>Which tab to make active on start up</description>
+    </key>
+    <key type="a(uss)" name="tab-info-list">
+      <summary>Details of open tabs</summary>
+      <default>[(0,'','')]</default>
+      <description>Array of tab info:  View mode, root uri, tip uri (for Miller view)</description>
+    </key>
+  </schema>
+
+  <schema path="/org/pantheon/files/icon-view/" id="org.pantheon.files.icon-view">
+    <key name="default-zoom-level" enum="org.pantheon.files.ZoomLevel">
+      <default>'large'</default>
+      <summary>icon default zoom level</summary>
+      <description>Default Zoom level used by the icon view.</description>
+    </key>
+    <key name="zoom-level" enum="org.pantheon.files.ZoomLevel">
+      <default>'large'</default>
+      <summary>icon zoom level</summary>
+      <description>Zoom level used by the icon view.</description>
+    </key>
+  </schema>
+
+  <schema path="/org/pantheon/files/list-view/" id="org.pantheon.files.list-view">
+    <key name="default-zoom-level" enum="org.pantheon.files.ZoomLevel">
+      <default>'small'</default>
+      <summary>icon default zoom level</summary>
+      <description>Default Zoom level used by the list view.</description>
+    </key>
+    <key name="zoom-level" enum="org.pantheon.files.ZoomLevel">
+      <default>'small'</default>
+      <summary>icon zoom level</summary>
+      <description>Zoom level used by the list view.</description>
+    </key>
+  </schema>
+
+  <schema path="/org/pantheon/files/column-view/" id="org.pantheon.files.column-view">
+    <key name="default-zoom-level" enum="org.pantheon.files.ZoomLevel">
+      <default>'small'</default>
+      <summary>icon default zoom level</summary>
+      <description>Default Zoom level used by the column view.</description>
+    </key>
+    <key name="zoom-level" enum="org.pantheon.files.ZoomLevel">
+      <default>'small'</default>
+      <summary>icon zoom level</summary>
+      <description>Zoom level used by the column view.</description>
+    </key>
+    <key type="i" name="preferred-column-width">
+      <default>180</default>
+      <summary>prefered column width</summary>
+      <description>The column width preferred by the miller column view.</description>
+    </key>
+  </schema>
+
+</schemalist>
