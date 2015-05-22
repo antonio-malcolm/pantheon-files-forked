@@ -2,12 +2,12 @@
 
 (and probably needs a better name than "pantheon-files-forked")
 
-...with a focus on becoming more platform-agnostic.
+...with a focus on becoming more platform-agnostic.  
 ...plus, simply, a few changes one guy felt like bringing to it.
 
-If you like it, use it (see: INSTALL.md)!
-If you have suggestions, suggest!
-If you want to contribute, contribute!
+If you like it, use it (see: INSTALL.md)!  
+If you have suggestions, suggest!  
+If you want to contribute, contribute!  
 
 **Cha-cha-cha-changes!**
 
@@ -19,7 +19,7 @@ If you want to contribute, contribute!
  * Means Files now looks (semi) normal in Openbox - YAY.
 
 * Some portions of code are updated for quality. 
- * Previews work- update #private string? previewer, in /src/View/AbstractDirectoryView.vala, with the CLI call for your previewer.
+ * Previews work- update #private string? previewer, in [AbstractDirectoryView.vala](src/View/AbstractDirectoryView.vala), with the CLI call for your previewer.
   * (Second order of TODO business is to make this work from the dconf setting.)
 
 There are a few other changes under the hood. 
@@ -39,8 +39,8 @@ Some of its features:
 * Built for the Pantheon DE as the main target (<-- not so much, anymore).
 * Tab browsing, allowing the restoration of closed tabs.
 * Support for extensions written in Vala. Current extensions include:
-    - Color tags for files and folders.
-    - Dropbox and Ubuntu One integration.
+  * Color tags for files and folders.
+  * Dropbox and Ubuntu One integration.
 
 For installation instructions read INSTALL.
 
